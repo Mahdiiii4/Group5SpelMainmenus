@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using static UnityEngine.Mathf;
 
 public class AudioText : MonoBehaviour
 {
@@ -11,6 +12,6 @@ public class AudioText : MonoBehaviour
     
     void Update()
     {
-        audioText.text = ("" + (volumeSlider.value)).ToString();
+        audioText.text = ("" + Mathf.Floor(volumeSlider.value)).ToString();
     }
 }
