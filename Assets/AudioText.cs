@@ -4,14 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
-public class AudioSlider : MonoBehaviour
+public class AudioText : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
-    public void Audio_Slider()
+    [SerializeField] TMP_Text audioText;
+    
+    void Update()
     {
-        AudioListener.volume = volumeSlider.value;
-
-        Debug.Log("" + AudioListener.volume);
+        audioText.text = ("" + (volumeSlider.value)).ToString();
     }
 }
