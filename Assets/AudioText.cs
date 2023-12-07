@@ -12,6 +12,6 @@ public class AudioText : MonoBehaviour
     
     void Update()
     {
-        audioText.text = ("" + Mathf.Floor(volumeSlider.value)).ToString();
+        audioText.text = ("" + Mathf.Floor(volumeSlider.value));
     }
 }
